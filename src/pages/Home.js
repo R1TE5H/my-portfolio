@@ -32,7 +32,7 @@ export default function Home() {
 
   return (
     <>
-      <div className="center section header">
+      <div className="center section header fadeIn">
         <p>
           <span className="hero gradient-text">Ritesh Persaud</span>
           <br />
@@ -40,7 +40,7 @@ export default function Home() {
             Full Stack Developer and Software Engineering Student
           </span>
         </p>
-
+        <br />
         <div className="rows" style={{ gap: "20px" }}>
           <button className="btn-lg gradient-bg">Contact Me</button>
           <a href={resume} download="Ritesh_Persaud_Resume.pdf">
@@ -64,7 +64,7 @@ export default function Home() {
         </div>
       </div>
       <div className="section">
-        <p className="subHead">Projects</p>
+        <p className="subHead">Projects -- Pending Upload...</p>
       </div>
     </>
   );
