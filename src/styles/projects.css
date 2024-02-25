@@ -1,0 +1,12 @@
+.projects-bar {
+  filter: grayscale(100%);
+  width: 10%;
+  border-radius: 100px;
+}
+
+.projects-bar:hover {
+  width: 40%;
+  border-radius: 50px;
+  transition: 0.5s ease;
+  filter: grayscale(0%);
+}

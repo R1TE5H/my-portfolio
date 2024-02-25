@@ -1,0 +1,11 @@
+.nav-bar {
+  padding: 0px 10%;
+  height: 70px;
+  background: var(--black);
+  font-size: large;
+  color: var(--grey);
+}
+
+.nav-content:hover {
+  color: var(--white);
+}
