@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import "../styles/main.css";
 import "../styles/nav-bar.css";
 
-import { FaLinkedinIn } from "react-icons/fa";
+import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 
 export default function NavBar() {
   return (
@@ -27,6 +27,13 @@ export default function NavBar() {
               target="blank"
             >
               <FaLinkedinIn size={20} className="nav-content" />
+            </a>{" "}
+            <a
+              style={{ textDecoration: "none", color: `var(--grey)` }}
+              href="https://github.com/R1TE5H"
+              target="blank"
+            >
+              <FaGithub size={20} className="nav-content" />
             </a>
           </div>
         </div>
