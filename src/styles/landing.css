@@ -20,6 +20,8 @@
   border: 4px solid var(--magenta);
 }
 
-.skills-card:hover img {
-  filter: sepia(100%);
+.tag {
+  width: fit-content;
+  padding: 5px 10px;
+  border-radius: 20px;
 }

@@ -30,6 +30,45 @@ export default function Home() {
     { img: figma, skill: "Figma" },
   ];
 
+  const experiences = [
+    {
+      role: "Researcher and Developer",
+      tags: ["WEB.3", "REACT.JS", "NODE.JS", "FIGMA"],
+      company: "LaunchPad@Stevens",
+      date: "2022 - Present",
+      content: [
+        "Research emerging technologies such as Blockchains and Artificial Intelligence",
+        "Developed a Blockchain using Object-Oriented Programming in JavaScript.",
+        "Create Rapid Application Prototypes using Figma Prototype Design.",
+        "Create engaging React.js applications utilizing React Hooks, External Libraries, Reusable Functional Components and Props",
+        "Implement REST API using Express.js and Node.js to interact with a MongoDB database server.",
+      ],
+    },
+    {
+      role: "Lead Software Developer",
+      tags: ["C++", "ALGORITHMS", "ROBOTICS"],
+      company: "WellCast ROI",
+      date: "Summer 2021",
+      content: [
+        "Tasked with designing and developing an autonomous robot capable of navigating an obstacle course and avoiding collisions.",
+        "Created the Robot using SolidWorks CAD and FlashPrint Slicing to design and print the body which was used to house a WeMos Circuit Board, Motor, and Ultrasonic Sensors.",
+        "Created Path-Finding, Target Recognition and Obstacle Avoidance algorithms using C++ and the Arduino IDE.",
+        "Placed 6th out of 150 teams.",
+      ],
+    },
+    {
+      role: "Intern",
+      tags: ["MICROSOFT OFFICE"],
+      company: "WellCast ROI",
+      date: "Summer 2021",
+      content: [
+        "Reviewed and ran the WellCast algorithm with various data inputs.",
+        "Developed client presentation within a team environment based on the WellCast algorithm's results.",
+        "Collaborated in teams of 3-4.",
+      ],
+    },
+  ];
+
   return (
     <>
       <div className="center section header fadeIn">
@@ -72,65 +111,37 @@ export default function Home() {
         }}
       >
         <p className="hero center">Experiences</p>
-        <div>
-          <p className="subHero">Researcher and Developer</p>
-          <p style={{ marginBottom: "15px" }}>
-            LaunchPad@Stevens | 2022 - Present
-          </p>
-          <ul type="circle">
-            <li>
-              Research Web.3 and Blockchain Technologies as well as Artificial
-              Intelligence and Machine Learning Developments
-            </li>
-            <li>Create Application Prototypes using Figma Prototype Design</li>
-            <li>
-              Create engaging websites and applications using HTML, CSS,
-              JavaScript, and React.JS
-            </li>
-            <li>
-              Develop algorithms to accomplish desired tasks using JavaScript,
-              Python, C++, and Java
-            </li>
-          </ul>
-        </div>
-        <div>
-          <p className="subHero">
-            Lead Algorithm Developer and Circuit Builder
-          </p>
-          <p style={{ marginBottom: "15px" }}>
-            Gallois Autonomous Robot Competition | Spring 2023
-          </p>
-          <ul type="circle">
-            <li>
-              Tasked with designing and developing an autonomous robot capable
-              of navigating an obstacle course and avoiding collisions.
-            </li>
-            <li>
-              Created the Robot using SolidWorks CAD and FlashPrint Slicing to
-              design and print the body which was used to house a WeMos Circuit
-              Board, Motor, and Ultrasonic Sensors.
-            </li>
-            <li>
-              Created Path-Finding, Target Recognition and Obstacle Avoidance
-              algorithms using C++ and the Arduino IDE.
-            </li>
-            <li>Placed 6th out of 150 teams</li>
-          </ul>
-        </div>
-        <div>
-          <p className="subHero">Intern</p>
-          <p style={{ marginBottom: "15px" }}>WellCast ROI | Summer 2021</p>
-          <ul type="circle">
-            <li>
-              Reviewed and ran the WellCast algorithm with various data inputs
-            </li>
-            <li>
-              Developed client presentation within a team environment based on
-              the WellCast algorithm's results
-            </li>
-            <li>Collaborated in teams of 3-4</li>
-          </ul>
-        </div>
+        {experiences.map((element) => (
+          <>
+            <div key={element.role}>
+              <div className="rows" style={{ justifyContent: "space-between" }}>
+                <p>
+                  <span style={{ fontSize: "30px", color: `var(--sun)` }}>
+                    |
+                  </span>{" "}
+                  <span className="subHero" style={{ fontWeight: "bold" }}>
+                    {element.role}
+                  </span>
+                </p>
+                <div className="rows" style={{ gap: "10px" }}>
+                  {element.tags.map((tag) => (
+                    <p key={tag} className="gradient-bg tag">
+                      {tag}
+                    </p>
+                  ))}
+                </div>
+              </div>
+              <p
+                style={{ marginBottom: "15px" }}
+              >{`${element.company} | ${element.date}`}</p>{" "}
+              <ul type="circle">
+                {element.content.map((bullet) => (
+                  <li key={bullet}>{bullet}</li>
+                ))}
+              </ul>
+            </div>
+          </>
+        ))}
       </div>
       <div className="section">
         <p className="subHead">Projects -- Pending Upload...</p>
