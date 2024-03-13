@@ -19,8 +19,6 @@ export default function NavBar() {
             Ritesh Persaud
           </Link>
           <div className="rows" style={{ gap: "20px" }}>
-            <p className="nav-content">Projects</p>
-            <p className="nav-content">Contact Me</p>
             <a
               style={{ textDecoration: "none", color: `var(--grey)` }}
               href="https://www.linkedin.com/in/ritesh-persaud-6688562aa"

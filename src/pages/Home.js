@@ -15,6 +15,7 @@ import figma from "../assets/skills/figma.png";
 import node from "../assets/skills/node.png";
 
 import resume from "../assets/documents/resume.pdf";
+import { FaGithub } from "react-icons/fa";
 
 export default function Home() {
   const skills = [
@@ -81,7 +82,11 @@ export default function Home() {
         </p>
         <br />
         <div className="rows" style={{ gap: "20px" }}>
-          <button className="btn-lg gradient-bg">Contact Me</button>
+          <a href="mailto:riteshpersaud2003@gmail.com">
+            {" "}
+            <button className="btn-lg gradient-bg">Contact Me</button>
+          </a>
+
           <a href={resume} download="Ritesh_Persaud_Resume.pdf">
             <button className="btn-lg white-outline"> Resume</button>
           </a>
@@ -143,8 +148,14 @@ export default function Home() {
           </>
         ))}
       </div>
-      <div className="section">
-        <p className="subHead">Projects -- Pending Upload...</p>
+      <div className=" center">
+        <a
+          style={{ textDecoration: "none", color: `var(--grey)` }}
+          href="https://github.com/R1TE5H"
+          target="blank"
+        >
+          <FaGithub size={150} className="nav-content" />
+        </a>
       </div>
     </>
   );
